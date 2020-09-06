@@ -27,9 +27,7 @@ def run_model(learning_rate):
 
     epochs = 50
 
-    # history = model.fit(x=X_train, y=Y_train, epochs=30, batch_size=1)
-
-    history = model.fit(
+    model.fit(
         train_generator,
         steps_per_epoch=24/batchsize, # TODO: fix this #TODO: check that mult by 10 reduces number of epochs to get to same thing 
         validation_data=val_generator,

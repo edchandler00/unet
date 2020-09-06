@@ -2,3 +2,4 @@
 __pycache__/
 logs/
 saved_models/
+data/temp_train_val_split/
