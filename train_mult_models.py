@@ -7,7 +7,6 @@ from datetime import datetime
 import os
 
 def run_model(learning_rate):
-#     learning_rate = 0.001
     print("Training with learning rate: " + str(learning_rate))
     
     train_name = datetime.now().strftime("%Y%m%d-%H%M%S") + "_lr" + str(learning_rate).split('.')[1]
@@ -47,7 +46,6 @@ def run_model(learning_rate):
     
 if __name__ == '__main__':
     learning_rates = [0.001, 0.0003, 0.0001]
-#     learning_rates = [0.001]
     print("Number of learning rates to try: " + str(len(learning_rates)))
     for learning_rate in learning_rates:
         p = multiprocessing.Process(target=run_model, args=(learning_rate,))
